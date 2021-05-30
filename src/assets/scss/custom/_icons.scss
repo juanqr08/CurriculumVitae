@@ -1,0 +1,30 @@
+.informationCard {
+    margin: 20px 0 20px 0 !important;
+    .mainInformation {
+        display: flex !important;
+        .mainInformationContent {
+            color: #a4a5a6;
+            margin: 0;
+            margin-left: 10px !important;
+            &:hover {
+                color: #1976d2;
+            }
+        }
+        &:hover {
+            color: #1976d2;
+        }
+    }
+}
+
+.social_networks {
+    display: flex;
+    margin-top: 10px !important;
+    .linkedin {
+        background-color: rgb(0, 115, 177) !important;
+        margin-right: 10px !important;
+    }
+    .whatsapp {
+        background-color: rgb(6, 215, 85) !important;
+        margin-right: 10px !important;
+    }
+}
