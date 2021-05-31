@@ -7,7 +7,7 @@ function App() {
     <Router>
       <div className="contentRoot">
         <Switch>
-          <Route path="/curriculum-vitae" exact>
+          <Route path="" strict="false" exact>
             <CurriculumVitae />
           </Route>
         </Switch>
