@@ -2,7 +2,7 @@
   "name": "cv",
   "version": "0.1.0",
   "private": true,  
-  "homepage": "http://juanqr08.github.io/curriculum-vitae",
+  "homepage": "http://juanqr08.github.io/CurriculumVitae",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
