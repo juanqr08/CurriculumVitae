@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/CurriculumVitae/static/css/main.525ab01c.chunk.css",
-    "main.js": "/CurriculumVitae/static/js/main.142f33a7.chunk.js",
-    "main.js.map": "/CurriculumVitae/static/js/main.142f33a7.chunk.js.map",
-    "runtime-main.js": "/CurriculumVitae/static/js/runtime-main.8d127207.js",
-    "runtime-main.js.map": "/CurriculumVitae/static/js/runtime-main.8d127207.js.map",
-    "static/js/2.2876fe23.chunk.js": "/CurriculumVitae/static/js/2.2876fe23.chunk.js",
-    "static/js/2.2876fe23.chunk.js.map": "/CurriculumVitae/static/js/2.2876fe23.chunk.js.map",
-    "static/js/3.48f2c526.chunk.js": "/CurriculumVitae/static/js/3.48f2c526.chunk.js",
-    "static/js/3.48f2c526.chunk.js.map": "/CurriculumVitae/static/js/3.48f2c526.chunk.js.map",
+    "main.css": "/CurriculumVitae/static/css/main.b505177f.chunk.css",
+    "main.js": "/CurriculumVitae/static/js/main.c5809025.chunk.js",
+    "main.js.map": "/CurriculumVitae/static/js/main.c5809025.chunk.js.map",
+    "runtime-main.js": "/CurriculumVitae/static/js/runtime-main.2cc5dc4b.js",
+    "runtime-main.js.map": "/CurriculumVitae/static/js/runtime-main.2cc5dc4b.js.map",
+    "static/js/2.a0d56f38.chunk.js": "/CurriculumVitae/static/js/2.a0d56f38.chunk.js",
+    "static/js/2.a0d56f38.chunk.js.map": "/CurriculumVitae/static/js/2.a0d56f38.chunk.js.map",
+    "static/js/3.2a0b9181.chunk.js": "/CurriculumVitae/static/js/3.2a0b9181.chunk.js",
+    "static/js/3.2a0b9181.chunk.js.map": "/CurriculumVitae/static/js/3.2a0b9181.chunk.js.map",
     "index.html": "/CurriculumVitae/index.html",
-    "static/css/main.525ab01c.chunk.css.map": "/CurriculumVitae/static/css/main.525ab01c.chunk.css.map",
-    "static/js/2.2876fe23.chunk.js.LICENSE.txt": "/CurriculumVitae/static/js/2.2876fe23.chunk.js.LICENSE.txt",
+    "static/css/main.b505177f.chunk.css.map": "/CurriculumVitae/static/css/main.b505177f.chunk.css.map",
+    "static/js/2.a0d56f38.chunk.js.LICENSE.txt": "/CurriculumVitae/static/js/2.a0d56f38.chunk.js.LICENSE.txt",
     "static/media/Microsoft.99cbfebe.jpg": "/CurriculumVitae/static/media/Microsoft.99cbfebe.jpg",
     "static/media/Unipanamericana.f7dd2b5e.jpg": "/CurriculumVitae/static/media/Unipanamericana.f7dd2b5e.jpg",
     "static/media/photo.d08b4690.jpg": "/CurriculumVitae/static/media/photo.d08b4690.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8d127207.js",
-    "static/js/2.2876fe23.chunk.js",
-    "static/css/main.525ab01c.chunk.css",
-    "static/js/main.142f33a7.chunk.js"
+    "static/js/runtime-main.2cc5dc4b.js",
+    "static/js/2.a0d56f38.chunk.js",
+    "static/css/main.b505177f.chunk.css",
+    "static/js/main.c5809025.chunk.js"
   ]
 }
