@@ -13,6 +13,10 @@ import HotelIcon from '@material-ui/icons/Hotel';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -21,37 +25,62 @@ const useStyles = makeStyles((theme) => ({
     secondaryTail: {
       backgroundColor: theme.palette.secondary.main,
     },
+    heading: {
+      fontSize: '1rem',
+      flexBasis: '33.33%',
+      flexShrink: 0,
+    },
+    secondaryHeading: {
+      fontSize: theme.typography.pxToRem(15),
+      color: theme.palette.text.secondary,
+    },
   }));
   
   const CustomTimeLine = (props) => {
     const classes = useStyles();
     const date = new Date();
-    const {data} = props;
+    const {data, title} = props;
+    const [expanded, setExpanded] = React.useState(false);
+
+    const handleChange = (panel) => (event, isExpanded) => {
+      setExpanded(isExpanded ? panel : false);
+    };
   
     return (
-      <Timeline align="alternate">
-          {data.map(item => (
-            <TimelineItem>
-                <TimelineOppositeContent>
-                    <Typography variant="body2" color="textSecondary">
-                    {date.getFullYear()}
-                    </Typography>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                    <TimelineDot variant="outlined" color={item.color} />
-                    <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                    <Paper elevation={3} className={classes.paper}>
-                    <Typography variant="h6" component="h1">
-                        {item.position}
-                    </Typography>
-                    <Typography>{item.functions}</Typography>
-                    </Paper>
-                </TimelineContent>
-            </TimelineItem>
-          ))}
-      </Timeline>
+      <div className="contentInformation">
+        <Typography component="h5" variant="h5" className="titlesInformation">
+          {title}
+        </Typography>
+        <Timeline align="alternate">
+            {data.map(item => (
+              <TimelineItem>
+                  <TimelineOppositeContent>
+                      <Typography variant="body2" color="textSecondary">
+                      {date.getFullYear()}
+                      </Typography>
+                  </TimelineOppositeContent>
+                  <TimelineSeparator>
+                      <TimelineDot variant="outlined" color={item.color} />
+                      <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                      <Accordion expanded={expanded === 'panel' + item.number} onChange={handleChange('panel' + item.number)}>
+                        <AccordionSummary
+                          expandIcon={<ExpandMoreIcon />}
+                          aria-controls="panel1bh-content"
+                          id="panel1bh-header"
+                        >
+                          <Typography variant="h6" component="h1" className={classes.heading}>{item.position}</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                          <Typography>{item.functions}</Typography>
+                        </AccordionDetails>
+                      </Accordion>
+                  </TimelineContent>
+              </TimelineItem>
+            ))}
+        </Timeline>
+      </div>
     );
 }
 

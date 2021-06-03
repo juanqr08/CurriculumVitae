@@ -4,6 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Divider from "@material-ui/core/Divider";
 import {main_information, social_networks} from "../constants/Informations";
+import Link from '@material-ui/core/Link';
+
 
 const Header = (props) => {
     const {name, position} = props;
@@ -35,9 +37,11 @@ const Header = (props) => {
                 <Divider />
                 <Typography className="social_networks">
                 { social_networks.map( (item) => (
+                    <Link href={item.url}>
                         <Avatar className={item.class}>
                             {item.icon}
                         </Avatar>
+                    </Link>
                 ))}
                 </Typography>
             </CardContent>

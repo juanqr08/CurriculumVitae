@@ -1,5 +1,6 @@
 export const Experience = [
     {
+        number: 1,
         business: 'Indra Colombia',
         countMonth: 18, 
         state: true,
@@ -8,6 +9,7 @@ export const Experience = [
         color: 'primary',
     },
     {
+        number: 2,
         business: 'Indra Colombia',
         countMonth: 18, 
         state: false,
@@ -16,6 +18,7 @@ export const Experience = [
         color: 'secondary',
     },
     {
+        number: 3,
         business: 'Practicante del Área de Audiovisuales',
         countMonth: 11, 
         state: false,

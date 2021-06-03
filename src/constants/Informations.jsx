@@ -13,6 +13,6 @@ export const main_information = [
 ]
 
 export const social_networks = [
-    { name: 'LinkedIn', url: 'www.linkedin.com/in/juan-jose-quintero-reatiga-65258a139', icon: <LinkedInIcon />, class: 'linkedin'},
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/juan-jose-quintero-reatiga-65258a139', icon: <LinkedInIcon />, class: 'linkedin'},
     { name: 'WhatsApp', url: 'https://wa.me/573123513362', icon: <WhatsAppIcon />, class: 'whatsapp'},
 ]
