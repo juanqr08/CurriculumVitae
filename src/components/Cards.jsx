@@ -29,6 +29,10 @@ const Cards = (props) => {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   const {classColorDivider, data, title} = props;
+  const date = new Date();
+  const currentMonth = (date.getUTCMonth() + 1) < 10 ? `0${date.getUTCMonth() + 1}` : date.getUTCMonth() + 1
+  const currentDay = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()
+  const currentDate = `${date.getFullYear()}-${currentMonth}-${currentDay}`
 
   return (
     <div className="contentInformation">
@@ -45,14 +49,14 @@ const Cards = (props) => {
                         <img src={item.img} alt={item.sourceImg} title={item.sourceImg} srcset="" />
                       </div> */}
                       <div className="details">
-                            { item.date ? 
+                            { item.date && item.state == false ? 
                             (
                               <Typography className="cardDate">
                                 {item.date}
                               </Typography>
                             ) : (
                               <Typography className="cardDate">
-                                NADA
+                                {currentDate}
                               </Typography>
                             )}
                         <Typography className="titlesCard">

@@ -7,11 +7,6 @@ import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
-import FastfoodIcon from '@material-ui/icons/Fastfood';
-import LaptopMacIcon from '@material-ui/icons/LaptopMac';
-import HotelIcon from '@material-ui/icons/Hotel';
-import RepeatIcon from '@material-ui/icons/Repeat';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -19,6 +14,8 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import BusinessIcon from '@material-ui/icons/Business';
 import DateRangeIcon from '@material-ui/icons/DateRange';
+import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
+import { monthNames } from '../constants/months';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -43,6 +40,8 @@ const useStyles = makeStyles((theme) => ({
     const date = new Date();
     const {classColorDivider,data, title} = props;
     const [expanded, setExpanded] = React.useState(false);
+    const currentMonth = monthNames[date.getUTCMonth()]['initials']
+    const currentDate = `${currentMonth} ${date.getUTCFullYear()}`
 
     const handleChange = (panel) => (event, isExpanded) => {
       setExpanded(isExpanded ? panel : false);
@@ -59,9 +58,15 @@ const useStyles = makeStyles((theme) => ({
             {data.map(item => (
               <TimelineItem>
                   <TimelineOppositeContent>
-                      <Typography variant="body2" color="textSecondary">
-                      {item.initial_date} - {item.final_date}
-                      </Typography>
+                        { item.final_date ? (
+                          <Typography variant="body2" color="textSecondary">
+                            {item.initial_date} - {item.final_date}
+                          </Typography>
+                        ) : (
+                          <Typography variant="body2" color="textSecondary">
+                            {item.initial_date} - {currentDate}
+                          </Typography>
+                        )}
                   </TimelineOppositeContent>
                   <TimelineSeparator>
                       <TimelineDot variant="outlined" color={item.color} />
@@ -88,6 +93,12 @@ const useStyles = makeStyles((theme) => ({
                               <DateRangeIcon className="iconTimeline" />
                               Tiempo de Experiencia:
                             </b> {item.countMonth} Meses
+                          </Typography>
+                          <Typography>
+                            <b>
+                              <PlayCircleFilledWhiteIcon className="iconTimeline" />
+                              Activo:
+                            </b> {item.state ? ("Si"):("No")}
                           </Typography>
                           <br />
                           <Typography className="functionsTimeline">{item.functions}</Typography>

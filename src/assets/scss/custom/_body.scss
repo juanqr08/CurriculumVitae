@@ -1,3 +1,7 @@
+footer {
+    background-color: #eaeaea !important;
+}
+
 .contentRoot{
     //margin-top: 80px !important;
     background-color: #efefef;
@@ -40,6 +44,7 @@
     .contentCards {
         display: flex !important;
         flex-wrap: wrap !important;
+        justify-content: center;
         //margin-left: 50px;
         .cardInfo{
             flex: 0 0 20% !important;

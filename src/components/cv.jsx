@@ -24,7 +24,7 @@ const CurriculumVitae = () => {
             <Divider  />
             <Cards classColorDivider="darkgray" data={Education} title="Educación/Cursos"/>
             <Divider  />
-            <Footer classColorDivider="lightgray" title="Juan Jose Quintero Reatiga" description="Ingeniero de Sistemas"/>
+            <Footer title="Juan Jose Quintero Reatiga" description="Ingeniero de Sistemas"/>
         </Card>        
     )
 }
