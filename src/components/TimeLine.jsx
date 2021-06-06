@@ -17,6 +17,8 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import BusinessIcon from '@material-ui/icons/Business';
+import DateRangeIcon from '@material-ui/icons/DateRange';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -39,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   const CustomTimeLine = (props) => {
     const classes = useStyles();
     const date = new Date();
-    const {data, title} = props;
+    const {classColorDivider,data, title} = props;
     const [expanded, setExpanded] = React.useState(false);
 
     const handleChange = (panel) => (event, isExpanded) => {
@@ -48,15 +50,17 @@ const useStyles = makeStyles((theme) => ({
   
     return (
       <div className="contentInformation">
-        <Typography component="h5" variant="h5" className="titlesInformation">
-          {title}
-        </Typography>
+        <div className={`dividerVertical ${classColorDivider}`}>
+          <Typography component="h5" variant="h5" className="titlesInformation">
+            {title}
+          </Typography>
+        </div>
         <Timeline align="alternate">
             {data.map(item => (
               <TimelineItem>
                   <TimelineOppositeContent>
                       <Typography variant="body2" color="textSecondary">
-                      {date.getFullYear()}
+                      {item.initial_date} - {item.final_date}
                       </Typography>
                   </TimelineOppositeContent>
                   <TimelineSeparator>
@@ -72,8 +76,21 @@ const useStyles = makeStyles((theme) => ({
                         >
                           <Typography variant="h6" component="h1" className={classes.heading}>{item.position}</Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
-                          <Typography>{item.functions}</Typography>
+                        <AccordionDetails className="detailsTimeline">
+                          <Typography>
+                            <b>
+                              <BusinessIcon className="iconTimeline" />
+                              Empresa:
+                            </b> {item.business}
+                          </Typography>
+                          <Typography>
+                            <b>
+                              <DateRangeIcon className="iconTimeline" />
+                              Tiempo de Experiencia:
+                            </b> {item.countMonth} Meses
+                          </Typography>
+                          <br />
+                          <Typography className="functionsTimeline">{item.functions}</Typography>
                         </AccordionDetails>
                       </Accordion>
                   </TimelineContent>

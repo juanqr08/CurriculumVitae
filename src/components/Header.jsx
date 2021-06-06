@@ -8,14 +8,16 @@ import Link from '@material-ui/core/Link';
 
 
 const Header = (props) => {
-    const {name, position} = props;
+    const {classColorDivider, name, position} = props;
     return (
         <div className="contentInformation">
-            <Avatar
-                className="profilePhoto"
-                src={photo}
-                title={name}
-            />
+            <div className={`dividerVertical ${classColorDivider}`}>
+                <Avatar
+                    className="profilePhoto"
+                    src={photo}
+                    title={name}
+                />
+            </div>
             <CardContent className="contentHeader">
                 <Typography component="h5" variant="h5">
                     {name}

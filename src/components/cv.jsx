@@ -13,18 +13,18 @@ import { Card } from '@material-ui/core';
 
 const CurriculumVitae = () => {
     return (
-        <Card>
-            <Header title="Hoja de Vida" name="Juan Jose Quintero Reatiga" position="Desarrollador"/>
+        <Card className="contentRoot">
+            <Header classColorDivider="darkgray" title="Hoja de Vida" name="Juan Jose Quintero Reatiga" position="Desarrollador"/>
             <Divider  />
-            <ProfileProfessional />
+            <ProfileProfessional classColorDivider="lightgray" />
             <Divider  />
-            <CustomTimeLine data={Experience} title="Experiencia Laboral" />
+            <CustomTimeLine classColorDivider="darkgray" data={Experience} title="Experiencia Laboral" />
             <Divider  />
-            <Knowledge data={Know} title="Habilidades" />
+            <Knowledge classColorDivider="lightgray" data={Know} title="Conocimientos" />
             <Divider  />
-            <Cards data={Education} title="Educación/Cursos"/>
+            <Cards classColorDivider="darkgray" data={Education} title="Educación/Cursos"/>
             <Divider  />
-            <Footer title="Juan Jose Quintero Reatiga" description="Ingeniero de Sistemas"/>
+            <Footer classColorDivider="lightgray" title="Juan Jose Quintero Reatiga" description="Ingeniero de Sistemas"/>
         </Card>        
     )
 }

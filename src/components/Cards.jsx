@@ -28,13 +28,15 @@ const useStyles = makeStyles({
 const Cards = (props) => {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
-  const {data, title} = props;
+  const {classColorDivider, data, title} = props;
 
   return (
     <div className="contentInformation">
-        <Typography component="h5" variant="h5" className="titlesInformation">
-            {title}
-        </Typography>
+        <div className={`dividerVertical ${classColorDivider}`}>
+          <Typography component="h5" variant="h5" className="titlesInformation">
+              {title}
+          </Typography>
+        </div>
         <div className="contentCards">
             {data.map(item => (
                 <Card className="cardInfo">

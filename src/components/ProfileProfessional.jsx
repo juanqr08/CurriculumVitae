@@ -6,11 +6,14 @@ import Divider from "@material-ui/core/Divider";
 import {main_information, social_networks} from "../constants/Informations";
 
 const ProfileProfessional = (props) => {
+    const {classColorDivider} = props;
     return (
         <div className="contentInformation">
-            <Typography component="h5" variant="h5" className="titlesInformation">
-                Perfil Profesional
-            </Typography>
+            <div className={`dividerVertical ${classColorDivider}`}>
+                <Typography component="h5" variant="h5" className="titlesInformation">
+                    Perfil Profesional
+                </Typography>
+            </div>
             <CardContent className="contentInformationGeneral">
                 <Typography component="h5" variant="h5" className="profileProfessional">
                 Estudiante de ingeniería de sistemas con la totalidad de los semestres ya cursados a la espera de recibir el título profesional, con experiencia en Administración de Servicios de Aplicación (Weblogic, Tomcat, JBoss, etc.) en el Datacenter de Claro, liderando proyectos de desarrollo enfocados en la automatización de procesos, cuenta con experiencia en el manejo de lenguajes de programación como Python, Java, Bash, lenguajes de desarrollo Web (Angular, React, Bootstrap, etc.), lenguajes de desarrollo de API’s REST, etc., con conocimientos en automatización por medio de la herramienta Ansible y en la creación de contenedores Docker, laborando actualmente como desarrollador y gestor de automatizaciones generando informes en archivos Word, lectura y análisis de datos bajo archivos XML/JSON, adicional la creación de variedad de monitores y capturas de información sobre servicios de aplicación, Sistemas Operativos Unix u otras plataformas, con un buen manejo de herramientas ofimáticas y telemáticas.

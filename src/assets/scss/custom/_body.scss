@@ -1,22 +1,53 @@
 .contentRoot{
     //margin-top: 80px !important;
     background-color: #efefef;
+    .mainInformationContent{
+        font-size: 1.01rem !important;
+        margin-top: 5px !important;
+    }
     .contentInformation {
         display: flex !important;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        //margin-top: 20px;
+        //margin-bottom: 20px;
         /* .colorFrame {
             background-color: rgba(170, 170, 170, 0.769);
         } */
+        .dividerVertical {
+            //margin-top: auto !important;
+            //margin-bottom: auto !important;
+            min-width: 250px;
+            margin-right: 20px;
+            &.darkgray {
+                background-color: #eaeaea;
+            }
+            &.lightgray {
+                background-color: #f8f8f8;
+            }
+        }
+        .detailsTimeline {
+            flex-direction: column;
+            .iconTimeline {
+                margin-right: 5px !important;
+                position: relative;
+                top: -3px !important;
+                //color: #757575 !important;
+            }
+            .functionsTimeline {
+                text-align: justify;
+            }
+        }
     }
     .contentCards {
         display: flex !important;
         flex-wrap: wrap !important;
-        margin-left: 50px;
+        //margin-left: 50px;
         .cardInfo{
             flex: 0 0 20% !important;
             min-width: 300px !important;
-            margin: 10px 10px 10px 10px !important;
+            margin-right: 10px !important;
+            margin-left: 0px !important;
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
             .cardDate {
                 text-align: center !important;
                 background-color: #0487cc;
@@ -75,8 +106,11 @@
         color: rgb(164, 165, 166);
         margin-right: 30px !important;
         margin-left: 30px !important;
-        margin-top: auto !important;
-        margin-bottom: auto !important;
+        //margin-top: auto !important;
+        //margin-bottom: auto !important;
+        text-align: center;
+        position: relative;
+        top: 40%;
     }
     .contentInformationGeneral {
         color: rgb(151, 152, 153);

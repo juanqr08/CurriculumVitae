@@ -14,15 +14,17 @@ const useStyles = makeStyles((theme) => ({
 const Knowledge = (props) => {
     
     const classes = useStyles()
-    const {data, title} = props;
+    const {classColorDivider, data, title} = props;
     const [progress, setProgress] = React.useState(10);
     const [buffer, setBuffer] = React.useState(10);
 
     return (
         <div className="contentInformation">
-            <Typography component="h5" variant="h5" className="titlesInformation">
-                {title}
-            </Typography>
+            <div className={`dividerVertical ${classColorDivider}`}>
+                <Typography component="h5" variant="h5" className="titlesInformation">
+                    {title}
+                </Typography>
+            </div>
             <div className="contentKnowledge">
                 {data.map(item => (
                     <div className="knowledge">
