@@ -28,3 +28,20 @@
         margin-right: 10px !important;
     }
 }
+
+.iconKnowledge {
+    margin-right: 15px;
+    max-width: 60px;
+    &.docker {
+        color: #0073ec !important;
+    }
+    &.angular {
+        color: #dd0031 !important;
+    }
+    &.react {
+        color: #61dafb !important;
+    }
+    &.windows {
+        color: #05a6f0 !important;
+    }
+}
