@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/CurriculumVitae/static/css/main.8ec6eac8.chunk.css",
-    "main.js": "/CurriculumVitae/static/js/main.a439a23a.chunk.js",
-    "main.js.map": "/CurriculumVitae/static/js/main.a439a23a.chunk.js.map",
+    "main.css": "/CurriculumVitae/static/css/main.511c4d16.chunk.css",
+    "main.js": "/CurriculumVitae/static/js/main.3d84be2f.chunk.js",
+    "main.js.map": "/CurriculumVitae/static/js/main.3d84be2f.chunk.js.map",
     "runtime-main.js": "/CurriculumVitae/static/js/runtime-main.093f68b7.js",
     "runtime-main.js.map": "/CurriculumVitae/static/js/runtime-main.093f68b7.js.map",
     "static/css/2.ae980b85.chunk.css": "/CurriculumVitae/static/css/2.ae980b85.chunk.css",
-    "static/js/2.477f7828.chunk.js": "/CurriculumVitae/static/js/2.477f7828.chunk.js",
-    "static/js/2.477f7828.chunk.js.map": "/CurriculumVitae/static/js/2.477f7828.chunk.js.map",
+    "static/js/2.35e6c7bb.chunk.js": "/CurriculumVitae/static/js/2.35e6c7bb.chunk.js",
+    "static/js/2.35e6c7bb.chunk.js.map": "/CurriculumVitae/static/js/2.35e6c7bb.chunk.js.map",
     "static/js/3.c1686999.chunk.js": "/CurriculumVitae/static/js/3.c1686999.chunk.js",
     "static/js/3.c1686999.chunk.js.map": "/CurriculumVitae/static/js/3.c1686999.chunk.js.map",
     "index.html": "/CurriculumVitae/index.html",
     "static/css/2.ae980b85.chunk.css.map": "/CurriculumVitae/static/css/2.ae980b85.chunk.css.map",
-    "static/css/main.8ec6eac8.chunk.css.map": "/CurriculumVitae/static/css/main.8ec6eac8.chunk.css.map",
-    "static/js/2.477f7828.chunk.js.LICENSE.txt": "/CurriculumVitae/static/js/2.477f7828.chunk.js.LICENSE.txt",
+    "static/css/main.511c4d16.chunk.css.map": "/CurriculumVitae/static/css/main.511c4d16.chunk.css.map",
+    "static/js/2.35e6c7bb.chunk.js.LICENSE.txt": "/CurriculumVitae/static/js/2.35e6c7bb.chunk.js.LICENSE.txt",
     "static/media/Microsoft.99cbfebe.jpg": "/CurriculumVitae/static/media/Microsoft.99cbfebe.jpg",
     "static/media/Unipanamericana.f7dd2b5e.jpg": "/CurriculumVitae/static/media/Unipanamericana.f7dd2b5e.jpg",
     "static/media/mdb.css": "/CurriculumVitae/static/media/arrow_right.0897f985.svg",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.093f68b7.js",
     "static/css/2.ae980b85.chunk.css",
-    "static/js/2.477f7828.chunk.js",
-    "static/css/main.8ec6eac8.chunk.css",
-    "static/js/main.a439a23a.chunk.js"
+    "static/js/2.35e6c7bb.chunk.js",
+    "static/css/main.511c4d16.chunk.css",
+    "static/js/main.3d84be2f.chunk.js"
   ]
 }
