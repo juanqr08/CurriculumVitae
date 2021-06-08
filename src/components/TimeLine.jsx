@@ -17,26 +17,7 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
 import { monthNames } from '../constants/months';
 
-const useStyles = makeStyles((theme) => ({
-    paper: {
-      padding: '6px 16px',
-    },
-    secondaryTail: {
-      backgroundColor: theme.palette.secondary.main,
-    },
-    heading: {
-      fontSize: '1rem',
-      flexBasis: '33.33%',
-      flexShrink: 0,
-    },
-    secondaryHeading: {
-      fontSize: theme.typography.pxToRem(15),
-      color: theme.palette.text.secondary,
-    },
-  }));
-  
-  const CustomTimeLine = (props) => {
-    const classes = useStyles();
+const CustomTimeLine = (props) => {
     const date = new Date();
     const {classColorDivider,data, title} = props;
     const [expanded, setExpanded] = React.useState(false);
@@ -46,6 +27,20 @@ const useStyles = makeStyles((theme) => ({
     const handleChange = (panel) => (event, isExpanded) => {
       setExpanded(isExpanded ? panel : false);
     };
+
+    const [width, setWindowWidth] = React.useState(0)
+    React.useEffect(() => { 
+
+      updateDimensions();
+
+      window.addEventListener("resize", updateDimensions);
+      return () => 
+        window.removeEventListener("resize",updateDimensions);
+      }, [])
+    const updateDimensions = () => {
+      const width = window.innerWidth
+      setWindowWidth(width)
+    }
   
     return (
       <div className="contentInformation">
@@ -54,60 +49,118 @@ const useStyles = makeStyles((theme) => ({
             {title}
           </Typography>
         </div>
-        <Timeline align="alternate">
-            {data.map(item => (
-              <TimelineItem>
-                  <TimelineOppositeContent>
-                        { item.final_date ? (
-                          <Typography variant="body2" color="textSecondary">
-                            {item.initial_date} - {item.final_date}
-                          </Typography>
-                        ) : (
-                          <Typography variant="body2" color="textSecondary">
-                            {item.initial_date} - {currentDate}
-                          </Typography>
-                        )}
-                  </TimelineOppositeContent>
-                  <TimelineSeparator>
-                      <TimelineDot variant="outlined" color={item.color} />
-                      <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>
-                      <Accordion expanded={expanded === 'panel' + item.number} onChange={handleChange('panel' + item.number)}>
-                        <AccordionSummary
-                          expandIcon={<ExpandMoreIcon />}
-                          aria-controls="panel1bh-content"
-                          id="panel1bh-header"
-                        >
-                          <Typography variant="h6" component="h1" className={classes.heading}>{item.position}</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails className="detailsTimeline">
-                          <Typography>
-                            <b>
-                              <BusinessIcon className="iconTimeline" />
-                              Empresa:
-                            </b> {item.business}
-                          </Typography>
-                          <Typography>
-                            <b>
-                              <DateRangeIcon className="iconTimeline" />
-                              Tiempo de Experiencia:
-                            </b> {item.countMonth} Meses
-                          </Typography>
-                          <Typography>
-                            <b>
-                              <PlayCircleFilledWhiteIcon className="iconTimeline" />
-                              Activo:
-                            </b> {item.state ? ("Si"):("No")}
-                          </Typography>
-                          <br />
-                          <Typography className="functionsTimeline">{item.functions}</Typography>
-                        </AccordionDetails>
-                      </Accordion>
-                  </TimelineContent>
-              </TimelineItem>
-            ))}
-        </Timeline>
+        { width < 482 ? (
+          <Timeline>
+              {data.map(item => (
+                <TimelineItem>
+                    <TimelineOppositeContent>
+                          { item.final_date ? (
+                            <Typography variant="body2" color="textSecondary">
+                              {item.initial_date} - {item.final_date}
+                            </Typography>
+                          ) : (
+                            <Typography variant="body2" color="textSecondary">
+                              {item.initial_date} - {currentDate}
+                            </Typography>
+                          )}
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                        <TimelineDot variant="outlined" color={item.color} />
+                        <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                        <Accordion className="accordionCard" expanded={expanded === 'panel' + item.number} onChange={handleChange('panel' + item.number)}>
+                          <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1bh-content"
+                            id="panel1bh-header"
+                          >
+                            <Typography variant="h6" component="h1" className="heading">{item.position}</Typography>
+                          </AccordionSummary>
+                          <AccordionDetails className="detailsTimeline">
+                            <Typography className="seccionsTimeline">
+                              <b>
+                                <BusinessIcon className="iconTimeline" />
+                                Empresa:
+                              </b> {item.business}
+                            </Typography>
+                            <Typography className="seccionsTimeline">
+                              <b>
+                                <DateRangeIcon className="iconTimeline" />
+                                Tiempo de Experiencia:
+                              </b> {item.countMonth} Meses
+                            </Typography>
+                            <Typography className="seccionsTimeline">
+                              <b>
+                                <PlayCircleFilledWhiteIcon className="iconTimeline" />
+                                Activo:
+                              </b> {item.state ? ("Si"):("No")}
+                            </Typography>
+                            <br />
+                            <Typography className="functionsTimeline">{item.functions}</Typography>
+                          </AccordionDetails>
+                        </Accordion>
+                    </TimelineContent>
+                </TimelineItem>
+              ))}
+          </Timeline>
+        ) : (
+          <Timeline align="alternate">
+              {data.map(item => (
+                <TimelineItem>
+                    <TimelineOppositeContent>
+                          { item.final_date ? (
+                            <Typography variant="body2" color="textSecondary">
+                              {item.initial_date} - {item.final_date}
+                            </Typography>
+                          ) : (
+                            <Typography variant="body2" color="textSecondary">
+                              {item.initial_date} - {currentDate}
+                            </Typography>
+                          )}
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                        <TimelineDot variant="outlined" color={item.color} />
+                        <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                        <Accordion expanded={expanded === 'panel' + item.number} onChange={handleChange('panel' + item.number)}>
+                          <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1bh-content"
+                            id="panel1bh-header"
+                          >
+                            <Typography variant="h6" component="h1" className="heading">{item.position}</Typography>
+                          </AccordionSummary>
+                          <AccordionDetails className="detailsTimeline">
+                            <Typography>
+                              <b>
+                                <BusinessIcon className="iconTimeline" />
+                                Empresa:
+                              </b> {item.business}
+                            </Typography>
+                            <Typography>
+                              <b>
+                                <DateRangeIcon className="iconTimeline" />
+                                Tiempo de Experiencia:
+                              </b> {item.countMonth} Meses
+                            </Typography>
+                            <Typography>
+                              <b>
+                                <PlayCircleFilledWhiteIcon className="iconTimeline" />
+                                Activo:
+                              </b> {item.state ? ("Si"):("No")}
+                            </Typography>
+                            <br />
+                            <Typography className="functionsTimeline">{item.functions}</Typography>
+                          </AccordionDetails>
+                        </Accordion>
+                    </TimelineContent>
+                </TimelineItem>
+              ))}
+          </Timeline>
+
+        )}
       </div>
     );
 }

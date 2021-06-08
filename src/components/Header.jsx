@@ -11,7 +11,7 @@ const Header = (props) => {
     const {classColorDivider, name, position} = props;
     return (
         <div className="contentInformation">
-            <div className={`dividerVertical ${classColorDivider}`}>
+            <div className={`dividerVertical ${classColorDivider} profile`}>
                 <Avatar
                     className="profilePhoto"
                     src={photo}

@@ -10,6 +10,7 @@ import Cards from "./Cards";
 import CustomTimeLine from "./TimeLine";
 import Divider from "@material-ui/core/Divider";
 import { Card } from '@material-ui/core';
+import detectPrint from "react-detect-print";
 
 const CurriculumVitae = () => {
     return (

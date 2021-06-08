@@ -28,9 +28,11 @@ const Knowledge = (props) => {
             <div className="contentKnowledge">
                 {data.map(item => (
                     <div className="knowledge">
-                        <Typography component="h5" variant="h5">
+                        <Typography component="h5" variant="h5" className="contentKnow">
                             {item.icon}
-                            {item.name}
+                            <Typography className="titleKnowledge">
+                                {item.name}
+                            </Typography>
                         </Typography>
                         <Box display="flex" alignItems="center">
                             <Box width="100%" mr={1}>
