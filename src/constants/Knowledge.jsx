@@ -13,7 +13,7 @@ import pythonIcon from '@iconify-icons/logos/python';
 export const Knowledge = [
     {
         name: 'Docker',
-        percentage: 70,
+        percentage: 50,
         icon: <MDBIcon className="iconKnowledge docker" fab icon="docker" />
     },
     {
@@ -28,7 +28,7 @@ export const Knowledge = [
     },
     {
         name: 'React.Js',
-        percentage: 80,
+        percentage: 70,
         icon: <MDBIcon className="iconKnowledge react" fab icon="react" />
     },
     {
@@ -53,7 +53,7 @@ export const Knowledge = [
     },
     {
         name: 'Ansible',
-        percentage: 90,
+        percentage: 70,
         icon: <Icon className="iconKnowledge" icon={ansibleIcon} />
     },
     {
@@ -68,17 +68,17 @@ export const Knowledge = [
     },
     {
         name: 'Oracle Weblogic',
-        percentage: 80,
+        percentage: 90,
         icon: <Icon className="iconKnowledge" icon={oracleIcon} />
     },
     {
         name: 'Apache Tomcat',
-        percentage: 80,
+        percentage: 90,
         icon: <Icon className="iconKnowledge" icon={tomcatIcon} />
     },
     {
         name: 'Apache',
-        percentage: 80,
+        percentage: 90,
         icon: <Icon className="iconKnowledge" icon={apacheIcon} />
     },
 ]
