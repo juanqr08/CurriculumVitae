@@ -334,7 +334,11 @@
  * Pantallas de Imprimir
  */
 @media only print {
+    /* a:after {
+        content: " (" attr(href) ")";
+    } */
     .contentRoot{
+        -webkit-print-color-adjust: exact;
         //margin-top: 80px !important;
         background-color: #efefef;
         .mainInformationContent{
